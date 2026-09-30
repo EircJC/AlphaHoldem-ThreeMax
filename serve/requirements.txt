@@ -1,0 +1,6 @@
+# 服务依赖(在项目根 pip install -r serve/requirements.txt)
+fastapi>=0.100
+uvicorn>=0.23
+pydantic>=2.0
+# torch 你的环境已装(训练/对局用的同一套),这里不重复钉版本
+# 河解(RIVER_SOLVE=1)另需 TexasSolver 二进制:bash serve/setup_river_solver.sh
