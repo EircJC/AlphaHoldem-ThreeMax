@@ -37,7 +37,8 @@ pip install -r serve/requirements.txt   # fastapi / uvicorn / pydantic
 ```bash
 cd AlphaHoldem-ThreeMax     # 必须 cd 进目录(相对路径 + 模块名靠当前目录解析)
 
-MODEL_PATH=runs/threemax_p3/model_iter885.pt \
+export MODEL_PATH=runs/threemax_p3/model_iter885.pt
+unset DB_PATH                 # 3人不用库,顺手清掉防残留
 python3 -m uvicorn serve.app3:app --host 0.0.0.0 --port 8001
 ```
 
